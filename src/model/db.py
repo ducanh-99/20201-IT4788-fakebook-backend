@@ -1,6 +1,6 @@
 from flask_mongoengine import MongoEngine
 
-db = MongoEngine()
+db = None
 
 def initialize_db(app):
-    db.init_app(app)
+    db = MongoEngine(app)
